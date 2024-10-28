@@ -1,0 +1,17 @@
+*:not(dialog){
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    
+}
+.mainBody{
+     display: flex;
+     gap: 10px;
+}
+.dashboard_C{
+     display: flex;
+     gap: 0px;
+}
+.courses{
+     display: flex;
+}

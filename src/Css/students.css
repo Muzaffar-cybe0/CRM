@@ -1,0 +1,410 @@
+.students_C {
+  display: flex;
+  position: relative;
+}
+.Delete_modal_Of_Students {
+  opacity: 0;
+  position: fixed;
+  top: -100%;
+  left: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgb(176, 176, 176);
+  transition: all 0.6s ease-in-out;
+  div:nth-child(1) {
+    p {
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+  div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    button {
+      width: 100%;
+      padding: 7px 0px;
+      border: 1px solid;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      font-size: 18px;
+    }
+    button:nth-child(1) {
+      background-color: dodgerblue;
+      color: white;
+    }
+    button:nth-child(1):hover {
+      background-color: rgb(86, 171, 255);
+      color: white;
+    }
+    button:nth-child(2) {
+      background-color: red;
+      color: white;
+    }
+    button:nth-child(2):hover {
+      background-color: rgb(255, 77, 77);
+      color: white;
+    }
+  }
+}
+.Edit_modal_Of_Students{
+     width: 28%;
+     opacity: 0;
+     position: fixed;
+     top: -100%;
+     left: 50%;
+     transform: translate(-50%,20%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 15px;
+     z-index: 1;
+     background-color: white;
+     box-shadow: 0 0 10px 1px rgb(179, 179, 179);
+     padding: 10px 20px;
+     border-radius: 10px;
+     transition: all 0.6s ease-in-out;
+     .Edit_child-1{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 10px;
+          p:nth-child(1){
+               font-size: 25px;
+               font-weight: bold;
+          }
+          p:nth-child(2){
+               width: 80%;
+               text-align: center;
+               font-size: 15px;
+          }
+     }
+     .Edit_child-2{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 15px;
+          div{
+               width: 100%;
+               display: flex;
+               flex-direction: column;
+          input{
+               width: 100%;
+               border: 1px solid rgb(187, 187, 187);
+               border-radius: 5px;
+               padding: 5px;
+          }
+          }
+          select{
+               width: 100%;
+               border: 1px solid rgb(187, 187, 187);
+               border-radius: 5px;
+               padding: 7px;
+          }
+     }
+     .Edit_child-3{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          button{
+               width: 100%;
+               padding: 3px 15px;
+               font-size: 18px;
+               border-radius: 5px;
+               border: 1px solid;
+               transition: all 0.3s ease-in-out;
+          }
+          button:nth-child(1){
+               background-color: dodgerblue;
+               color: white;
+          }
+          button:nth-child(1):hover{
+               background-color: rgb(80, 167, 255);
+               color: white;
+          }
+          button:nth-child(2){
+               background-color: red;
+               color: white;
+          }
+          button:nth-child(2):hover{
+               background-color: rgb(255, 85, 85);
+               color: white;
+               
+          }
+     }
+}
+.students {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+.students_child-1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px 0px;
+  height: 10%;
+  background-color: rgb(231, 233, 238);
+  p:nth-child(1) {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  p:nth-child(2) {
+    font-size: 25px;
+    color: dodgerblue;
+    font-weight: 600;
+  }
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .darkThemeBtn * {
+    transition: all 0.3s;
+  }
+
+  .darkThemeBtn input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .darkThemeBtn label {
+    border: 1px solid #efefef;
+    background: rgba(255, 254, 254, 0.753);
+    border-radius: 10px;
+    height: 46px;
+    width: 46px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .darkThemeBtn label:active {
+    border-radius: 5px;
+  }
+
+  .darkThemeBtn label svg {
+    position: absolute;
+    width: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    fill: #000;
+  }
+
+  .darkThemeBtn label svg.sun {
+    width: 20px;
+    opacity: 0;
+    fill: #fff;
+  }
+
+  .darkThemeBtn label svg.moon {
+    opacity: 1;
+  }
+
+  .darkThemeBtn input:checked + label {
+    background: #4a6cf7;
+  }
+
+  .darkThemeBtn input:checked + label svg.sun {
+    opacity: 1;
+  }
+
+  .darkThemeBtn input:checked + label svg.moon {
+    opacity: 0;
+  }
+
+  .darkThemeBtn input:checked ~ span {
+    background-color: #16174b;
+  }
+}
+.students_child-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 45px;
+  
+}
+.students_Child2_child-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.title_of_students {
+  width: 100%;
+  p {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+.Add_Student_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  input {
+    width: 32%;
+    border: 1px solid rgb(149, 149, 149);
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+  select {
+    width: 32%;
+    border: 1px solid rgb(149, 149, 149);
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  button {
+    width: 32%;
+    padding: 9px 10px;
+    border-radius: 5px;
+    background-color: rgb(3, 122, 240);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+  }
+  button:hover {
+    background-color: rgb(35, 145, 255);
+  }
+}
+.students_Child2_child-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  tbody {
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  thead {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(197, 210, 220);
+    padding: 10px 10px;
+  }
+  tbody {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgb(197, 197, 197);
+
+    td {
+      width: 20%;
+    }
+    td:nth-child(1) {
+      width: 5%;
+    }
+    td:nth-child(2) {
+      width: 15%;
+    }
+    td:nth-child(3) {
+      width: 15%;
+    }
+    td:nth-child(4) {
+      width: 15%;
+    }
+    td:nth-child(5) {
+      width: 20%;
+    }
+    td:nth-child(6) {
+      width: 15%;
+      text-align: left;
+    }
+    td:nth-child(7) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 10%;
+      text-align: right;
+      i {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 12px;
+        transition: all 0.3s ease-in-out;
+        font-size: 18px;
+      }
+      button:nth-child(1) {
+        i {
+          background-color: red;
+          color: white;
+        }
+        i:hover {
+          background-color: rgb(255, 74, 74);
+          color: white;
+        }
+      }
+      button:nth-child(2) {
+        i {
+          background-color: dodgerblue;
+          color: white;
+        }
+        i:hover {
+          background-color: rgb(72, 164, 255);
+          color: white;
+        }
+      }
+    }
+  }
+
+  tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  th {
+    padding: 10px;
+    font-size: 20px;
+  }
+}

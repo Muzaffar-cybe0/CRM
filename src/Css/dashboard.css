@@ -1,0 +1,145 @@
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .dashboard_child-1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px 0px;
+    height: 10%;
+    background-color: rgb(231, 233, 238);
+
+    p:nth-child(1) {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    p:nth-child(2) {
+      font-size: 25px;
+      color: dodgerblue;
+      font-weight: 600;
+    }
+  }
+
+  .dashboard_child-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .card {
+      border: 1px solid rgb(223, 223, 223);
+      width: 33%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 7px 10px 1px rgb(227, 227, 227);
+
+      p {
+        font-size: 32px;
+      }
+
+      img {
+        width: 35px;
+      }
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      background-color: rgb(243, 248, 255);
+    }
+  }
+}
+
+.darkThemeBtn * {
+  transition: all 0.3s;
+}
+
+.tooltip_of_piechart {
+  background-color: #000000d7;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    div {
+      width: 15px;
+      height: 15px;
+      background-color: rgb(255, 0, 0);
+      border: 1px solid white;
+    }
+  }
+}
+
+.darkThemeBtn input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.darkThemeBtn label {
+  border: 1px solid #efefef;
+  background: rgba(255, 254, 254, 0.753);
+  border-radius: 10px;
+  height: 46px;
+  width: 46px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.darkThemeBtn label:active {
+  border-radius: 5px;
+}
+
+.darkThemeBtn label svg {
+  position: absolute;
+  width: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  fill: #000;
+}
+
+.darkThemeBtn label svg.sun {
+  width: 20px;
+  opacity: 0;
+  fill: #fff;
+}
+
+.darkThemeBtn label svg.moon {
+  opacity: 1;
+}
+
+.darkThemeBtn input:checked+label {
+  background: #4a6cf7;
+}
+
+.darkThemeBtn input:checked+label svg.sun {
+  opacity: 1;
+}
+
+.darkThemeBtn input:checked+label svg.moon {
+  opacity: 0;
+}
+
+.darkThemeBtn input:checked~span {
+  background-color: #16174b;
+}

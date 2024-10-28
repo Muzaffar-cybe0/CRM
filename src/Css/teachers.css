@@ -1,0 +1,303 @@
+.teachers_C {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.teachers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.teachers_child-1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px 0px;
+  height: 10%;
+  background-color: rgb(231, 233, 238);
+  p:nth-child(1) {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  p:nth-child(2) {
+    font-size: 25px;
+    color: dodgerblue;
+    font-weight: 600;
+  }
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .darkThemeBtn * {
+    transition: all 0.3s;
+  }
+
+  .darkThemeBtn input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .darkThemeBtn label {
+    border: 1px solid #efefef;
+    background: rgba(255, 254, 254, 0.753);
+    border-radius: 10px;
+    height: 46px;
+    width: 46px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .darkThemeBtn label:active {
+    border-radius: 5px;
+  }
+
+  .darkThemeBtn label svg {
+    position: absolute;
+    width: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    fill: #000;
+  }
+
+  .darkThemeBtn label svg.sun {
+    width: 20px;
+    opacity: 0;
+    fill: #fff;
+  }
+
+  .darkThemeBtn label svg.moon {
+    opacity: 1;
+  }
+
+  .darkThemeBtn input:checked + label {
+    background: #4a6cf7;
+  }
+
+  .darkThemeBtn input:checked + label svg.sun {
+    opacity: 1;
+  }
+
+  .darkThemeBtn input:checked + label svg.moon {
+    opacity: 0;
+  }
+
+  .darkThemeBtn input:checked ~ span {
+    background-color: #16174b;
+  }
+}
+.teachers_child-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  .teachersChild2-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    p {
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .form_addTeacher {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      input {
+        width: 32%;
+        padding: 5px 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px rgb(205, 205, 205);
+      }
+      input:hover {
+        cursor: pointer;
+      }
+      select {
+        box-shadow: 0 0 0 1px gray;
+        outline: none;
+        width: 32%;
+        padding: 10px 0px;
+        border-radius: 5px;
+      }
+      button {
+        background-color: dodgerblue;
+        color: white;
+        text-transform: uppercase;
+        width: 32%;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        padding: 10px 0px;
+      }
+      button:hover {
+        background-color: rgb(86, 168, 250);
+      }
+    }
+  }
+  .teachersChild-2 {
+    thead{
+      background-color: rgb(198, 210, 223);
+      height: 60px;
+      th{
+        p{
+          font-size: 18px;
+        }
+      }
+    }    
+    tr{
+      td{
+        text-align: center;
+        img{
+          width: 55px;
+          height: 55px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+   tbody tr{
+      border-bottom: 1px solid rgb(213, 213, 213);
+      td{
+        padding: 15px 0px;
+        button{
+          padding: 10px 15px;
+          border-radius: 15px;
+        }
+        button:nth-child(1){
+          background-color: red;
+          color: white;
+          margin-right: 15px;
+        }
+        button:nth-child(2){
+          background-color: blue;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.Delete_course_Teachers {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px rgb(202, 202, 202);
+  padding: 25px 10px;
+  border-radius: 10px;
+  opacity: 0;
+  h1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  p {
+    text-align: center;
+    width: 70%;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    button {
+      padding: 6px 65px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+    }
+    button:nth-child(1) {
+      background-color: blue;
+    }
+    button:nth-child(2) {
+      background-color: red;
+    }
+  }
+}
+.Change_Data_Teachers {
+  z-index: 99;
+  opacity: 0;
+  width: 27%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px rgb(183, 183, 183);
+  padding: 25px 20px;
+  border-radius: 10px;
+  div:nth-child(1) {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+  }
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input {
+      height: 35px;
+      border: 1px solid dodgerblue;
+      border-radius: 10px;
+      padding-left: 10px;
+    }
+    span{
+     p{
+          span{
+               font-size: 12px;
+          }
+     }
+    }
+  }
+  div:nth-child(3) {
+    display: flex;
+    gap: 10px;
+    button {
+      width: 50%;
+      padding: 5px 0px;
+      border: 1px solid;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    button:nth-child(1) {
+      background-color: red;
+      color: white;
+    }
+    button:nth-child(1):hover {
+      background-color: rgb(255, 96, 96);
+    }
+    button:nth-child(2) {
+      background-color: blue;
+      color: white;
+    }
+    button:nth-child(2):hover {
+      background-color: rgb(64, 64, 255);
+    }
+  }
+}
